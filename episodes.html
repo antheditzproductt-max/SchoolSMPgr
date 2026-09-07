@@ -1,0 +1,213 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SchoolSMP | All Episodes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOADING SCREEN
+    ========================== -->
+
+    <div id="loading-screen">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                School<span>SMP</span>
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+
+            <p>Loading SchoolSMP...</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            School<span>SMP</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="episodes.html" class="active">All Episodes</a>
+            <a href="creators.html">Creators</a>
+        </nav>
+
+        <a
+            href="https://discord.gg/bfmBcPR32j"
+            target="_blank"
+            class="discord-button">
+            Discord
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="episodes-page">
+
+        <section class="page-header">
+
+            <p class="page-small-title">
+                SCHOOLSMP
+            </p>
+
+            <h1>
+                All Episodes
+            </h1>
+
+            <p>
+                Watch every SchoolSMP episode from every creator's POV.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             M4HAKOSX5
+        ========================== -->
+
+        <section class="creator-row">
+
+            <div class="creator-info">
+
+                <h2>
+                    M4hakosx5
+                </h2>
+
+                <p>
+                    9 Episodes
+                </p>
+
+                <a
+                    href="m4hakosx5.html"
+                    class="creator-watch-button">
+                    Watch "M4hakosx5" Episodes
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BOTINIS_
+        ========================== -->
+
+        <section class="creator-row">
+
+            <div class="creator-info">
+
+                <h2>
+                    botinis_
+                </h2>
+
+                <p>
+                    5 Episodes
+                </p>
+
+                <a
+                    href="botinis.html"
+                    class="creator-watch-button">
+                    Watch "botinis_" Episodes
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BLITZXNOVA
+        ========================== -->
+
+        <section class="creator-row">
+
+            <div class="creator-info">
+
+                <h2>
+                    BlitzxNova
+                </h2>
+
+                <p>
+                    5 Episodes
+                </p>
+
+                <a
+                    href="blitzxnova.html"
+                    class="creator-watch-button">
+                    Watch "BlitzxNova" Episodes
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 SchoolSMP
+        </p>
+
+        <p class="creator-credit">
+            Site Created by <span>x4nth</span>
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         LOADING SCRIPT
+    ========================== -->
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                const loadingScreen =
+                    document.getElementById("loading-screen");
+
+                loadingScreen.classList.add("hidden");
+
+                setTimeout(function () {
+                    loadingScreen.remove();
+                }, 700);
+
+            }, 1200);
+
+        });
+
+    </script>
+
+</body>
+</html>
