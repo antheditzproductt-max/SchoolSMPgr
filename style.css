@@ -1,0 +1,801 @@
+/* ========================================
+   SCHOOLSMP - GLOBAL STYLE
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    position: relative;
+    z-index: 100;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(5, 5, 5, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #e50914;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #aaa;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffffff;
+}
+
+.navbar nav a.active {
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 6px;
+}
+
+.discord-button {
+    text-decoration: none;
+
+    color: #ffffff;
+    background: #e50914;
+
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.discord-button:hover {
+    background: #ff1a25;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   HOME PAGE
+======================================== */
+
+.hero-background {
+    position: fixed;
+    inset: 0;
+
+    z-index: -3;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transform: scale(1.03);
+}
+
+.hero-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.78) 40%,
+            rgba(0, 0, 0, 0.35) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #080808 0%,
+            transparent 45%
+        );
+}
+
+.bottom-fade {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 180px;
+
+    z-index: -1;
+
+    background: linear-gradient(
+        to top,
+        #080808,
+        transparent
+    );
+}
+
+.hero {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: 0.95;
+
+    font-weight: 900;
+    letter-spacing: -4px;
+
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #e50914;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #c5c5c5;
+
+    max-width: 550px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.watch-button,
+.discord-hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    padding: 14px 25px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.watch-button {
+    background: #e50914;
+    color: #ffffff;
+}
+
+.watch-button:hover {
+    background: #ff1a25;
+    transform: translateY(-2px);
+}
+
+.discord-hero-button {
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.discord-hero-button:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   GENERAL PAGE HEADER
+======================================== */
+
+.page-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.page-small-title {
+    color: #e50914;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.page-header h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    font-weight: 900;
+    letter-spacing: -2px;
+
+    margin-bottom: 15px;
+}
+
+.page-header > p:last-child {
+    color: #999;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   ALL EPISODES PAGE
+======================================== */
+
+.episodes-page {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 90px 0 100px;
+}
+
+.creator-row {
+    position: relative;
+
+    margin-bottom: 25px;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(229, 9, 20, 0.10),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.creator-row::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #e50914;
+}
+
+.creator-row:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(229, 9, 20, 0.35);
+}
+
+.creator-info h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.creator-info p {
+    color: #888;
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+.creator-watch-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #e50914;
+    color: #ffffff;
+
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.creator-watch-button:hover {
+    background: #ff1a25;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   CREATOR POV PAGES
+======================================== */
+
+.creator-page {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 80px 0 100px;
+}
+
+.episode-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.episode-card {
+    display: block;
+
+    text-decoration: none;
+
+    background: #111;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(229, 9, 20, 0.6);
+}
+
+.episode-card img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.35s ease;
+}
+
+.episode-card:hover img {
+    transform: scale(1.04);
+}
+
+.episode-info {
+    padding: 18px;
+}
+
+.episode-info h3 {
+    color: #ffffff;
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.episode-info p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CREATORS PAGE
+======================================== */
+
+.creators-page {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 90px 0 100px;
+}
+
+.creator-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(229, 9, 20, 0.09),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    padding: 32px 35px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s ease;
+
+    overflow: hidden;
+}
+
+.creator-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #e50914;
+}
+
+.creator-card:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(229, 9, 20, 0.35);
+}
+
+.creator-details {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.creator-details h2 {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.creator-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.creator-socials a {
+    color: #ffffff;
+
+    font-size: 22px;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.creator-socials a:hover {
+    color: #e50914;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   LOADING SCREEN
+======================================== */
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #080808;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    width: 300px;
+
+    text-align: center;
+}
+
+.loader-logo {
+    font-size: 35px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+}
+
+.loader-logo span {
+    color: #e50914;
+}
+
+.loader-line {
+    width: 100%;
+    height: 3px;
+
+    background: #222;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.loader-progress {
+    width: 0;
+    height: 100%;
+
+    background: #e50914;
+
+    animation: loading 1.2s ease forwards;
+}
+
+.loader-content p {
+    color: #666;
+
+    font-size: 12px;
+
+    margin-top: 15px;
+
+    letter-spacing: 1px;
+}
+
+@keyframes loading {
+
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    position: relative;
+
+    width: 100%;
+
+    padding: 30px 6%;
+
+    background: #050505;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+.creator-credit span {
+    color: #e50914;
+
+    font-weight: 800;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .episode-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar nav {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 0 6%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+    .navbar nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .discord-button {
+        padding: 8px 14px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 120px);
+
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .episodes-page,
+    .creators-page,
+    .creator-page {
+        padding-top: 60px;
+    }
+
+    .creator-row,
+    .creator-card {
+        padding: 28px 25px;
+    }
+
+    .episode-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .creator-details {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .creator-socials {
+        gap: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .watch-button,
+    .discord-hero-button {
+        width: 100%;
+    }
+
+}
